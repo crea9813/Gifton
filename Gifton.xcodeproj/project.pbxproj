@@ -10,24 +10,86 @@
 		2F30991C2963C5DA006A967C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30991B2963C5DA006A967C /* AppDelegate.swift */; };
 		2F30991E2963C5DA006A967C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30991D2963C5DA006A967C /* SceneDelegate.swift */; };
 		2F3099202963C5DA006A967C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30991F2963C5DA006A967C /* ViewController.swift */; };
-		2F3099232963C5DA006A967C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F3099212963C5DA006A967C /* Main.storyboard */; };
 		2F3099252963C5DD006A967C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F3099242963C5DD006A967C /* Assets.xcassets */; };
 		2F3099282963C5DD006A967C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F3099262963C5DD006A967C /* LaunchScreen.storyboard */; };
+		2F3099312963D039006A967C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3099302963D039006A967C /* RxCocoa */; };
+		2F3099332963D039006A967C /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3099322963D039006A967C /* RxRelay */; };
+		2F3099352963D039006A967C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3099342963D039006A967C /* RxSwift */; };
+		2F30993F2963D0E7006A967C /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F30993E2963D0E7006A967C /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F3099422963D0E7006A967C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F30993C2963D0E7006A967C /* Domain.framework */; };
+		2F3099432963D0E7006A967C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F30993C2963D0E7006A967C /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2F3099502963D118006A967C /* NetworkPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F30994F2963D118006A967C /* NetworkPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F3099532963D118006A967C /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F30994D2963D118006A967C /* NetworkPlatform.framework */; };
+		2F3099542963D118006A967C /* NetworkPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F30994D2963D118006A967C /* NetworkPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F3099402963D0E7006A967C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F3099102963C5DA006A967C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F30993B2963D0E7006A967C;
+			remoteInfo = Domain;
+		};
+		2F3099512963D118006A967C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F3099102963C5DA006A967C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F30994C2963D118006A967C;
+			remoteInfo = NetworkPlatform;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2F3099472963D0E7006A967C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2F3099542963D118006A967C /* NetworkPlatform.framework in Embed Frameworks */,
+				2F3099432963D0E7006A967C /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2F3099182963C5DA006A967C /* Gifton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gifton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F30991B2963C5DA006A967C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F30991D2963C5DA006A967C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2F30991F2963C5DA006A967C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2F3099222963C5DA006A967C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F3099242963C5DD006A967C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F3099272963C5DD006A967C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F3099292963C5DD006A967C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F30993C2963D0E7006A967C /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F30993E2963D0E7006A967C /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
+		2F30994D2963D118006A967C /* NetworkPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F30994F2963D118006A967C /* NetworkPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkPlatform.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2F3099152963C5DA006A967C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F3099422963D0E7006A967C /* Domain.framework in Frameworks */,
+				2F3099532963D118006A967C /* NetworkPlatform.framework in Frameworks */,
+				2F3099352963D039006A967C /* RxSwift in Frameworks */,
+				2F3099332963D039006A967C /* RxRelay in Frameworks */,
+				2F3099312963D039006A967C /* RxCocoa in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F3099392963D0E7006A967C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F30994A2963D118006A967C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				2F30991A2963C5DA006A967C /* Gifton */,
+				2F30993D2963D0E7006A967C /* Domain */,
+				2F30994E2963D118006A967C /* NetworkPlatform */,
 				2F3099192963C5DA006A967C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				2F3099182963C5DA006A967C /* Gifton.app */,
+				2F30993C2963D0E7006A967C /* Domain.framework */,
+				2F30994D2963D118006A967C /* NetworkPlatform.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,10 +122,10 @@
 		2F30991A2963C5DA006A967C /* Gifton */ = {
 			isa = PBXGroup;
 			children = (
+				2F30995B29640736006A967C /* Scene */,
 				2F30991B2963C5DA006A967C /* AppDelegate.swift */,
 				2F30991D2963C5DA006A967C /* SceneDelegate.swift */,
 				2F30991F2963C5DA006A967C /* ViewController.swift */,
-				2F3099212963C5DA006A967C /* Main.storyboard */,
 				2F3099242963C5DD006A967C /* Assets.xcassets */,
 				2F3099262963C5DD006A967C /* LaunchScreen.storyboard */,
 				2F3099292963C5DD006A967C /* Info.plist */,
@@ -67,7 +133,81 @@
 			path = Gifton;
 			sourceTree = "<group>";
 		};
+		2F30993D2963D0E7006A967C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2F3099582963D143006A967C /* UseCase */,
+				2F30993E2963D0E7006A967C /* Domain.h */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2F30994E2963D118006A967C /* NetworkPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				2F30995A2963F913006A967C /* API */,
+				2F3099592963F88D006A967C /* Network */,
+				2F30994F2963D118006A967C /* NetworkPlatform.h */,
+			);
+			path = NetworkPlatform;
+			sourceTree = "<group>";
+		};
+		2F3099582963D143006A967C /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		2F3099592963F88D006A967C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2F30995A2963F913006A967C /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		2F30995B29640736006A967C /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				2F30995C2964073F006A967C /* Gifts */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		2F30995C2964073F006A967C /* Gifts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Gifts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2F3099372963D0E7006A967C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F30993F2963D0E7006A967C /* Domain.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F3099482963D118006A967C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F3099502963D118006A967C /* NetworkPlatform.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		2F3099172963C5DA006A967C /* Gifton */ = {
@@ -77,15 +217,59 @@
 				2F3099142963C5DA006A967C /* Sources */,
 				2F3099152963C5DA006A967C /* Frameworks */,
 				2F3099162963C5DA006A967C /* Resources */,
+				2F3099472963D0E7006A967C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F3099412963D0E7006A967C /* PBXTargetDependency */,
+				2F3099522963D118006A967C /* PBXTargetDependency */,
+			);
+			name = Gifton;
+			packageProductDependencies = (
+				2F3099302963D039006A967C /* RxCocoa */,
+				2F3099322963D039006A967C /* RxRelay */,
+				2F3099342963D039006A967C /* RxSwift */,
+			);
+			productName = Gifton;
+			productReference = 2F3099182963C5DA006A967C /* Gifton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2F30993B2963D0E7006A967C /* Domain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F3099442963D0E7006A967C /* Build configuration list for PBXNativeTarget "Domain" */;
+			buildPhases = (
+				2F3099372963D0E7006A967C /* Headers */,
+				2F3099382963D0E7006A967C /* Sources */,
+				2F3099392963D0E7006A967C /* Frameworks */,
+				2F30993A2963D0E7006A967C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Gifton;
-			productName = Gifton;
-			productReference = 2F3099182963C5DA006A967C /* Gifton.app */;
-			productType = "com.apple.product-type.application";
+			name = Domain;
+			productName = Domain;
+			productReference = 2F30993C2963D0E7006A967C /* Domain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2F30994C2963D118006A967C /* NetworkPlatform */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F3099552963D119006A967C /* Build configuration list for PBXNativeTarget "NetworkPlatform" */;
+			buildPhases = (
+				2F3099482963D118006A967C /* Headers */,
+				2F3099492963D118006A967C /* Sources */,
+				2F30994A2963D118006A967C /* Frameworks */,
+				2F30994B2963D118006A967C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkPlatform;
+			productName = NetworkPlatform;
+			productReference = 2F30994D2963D118006A967C /* NetworkPlatform.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +284,12 @@
 					2F3099172963C5DA006A967C = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					2F30993B2963D0E7006A967C = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					2F30994C2963D118006A967C = {
+						CreatedOnToolsVersion = 14.2;
+					};
 				};
 			};
 			buildConfigurationList = 2F3099132963C5DA006A967C /* Build configuration list for PBXProject "Gifton" */;
@@ -111,11 +301,16 @@
 				Base,
 			);
 			mainGroup = 2F30990F2963C5DA006A967C;
+			packageReferences = (
+				2F30992F2963D039006A967C /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 2F3099192963C5DA006A967C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				2F3099172963C5DA006A967C /* Gifton */,
+				2F30993B2963D0E7006A967C /* Domain */,
+				2F30994C2963D118006A967C /* NetworkPlatform */,
 			);
 		};
 /* End PBXProject section */
@@ -127,7 +322,20 @@
 			files = (
 				2F3099282963C5DD006A967C /* LaunchScreen.storyboard in Resources */,
 				2F3099252963C5DD006A967C /* Assets.xcassets in Resources */,
-				2F3099232963C5DA006A967C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F30993A2963D0E7006A967C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F30994B2963D118006A967C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,17 +352,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2F3099382963D0E7006A967C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F3099492963D118006A967C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		2F3099212963C5DA006A967C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2F3099222963C5DA006A967C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		2F3099412963D0E7006A967C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F30993B2963D0E7006A967C /* Domain */;
+			targetProxy = 2F3099402963D0E7006A967C /* PBXContainerItemProxy */;
 		};
+		2F3099522963D118006A967C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F30994C2963D118006A967C /* NetworkPlatform */;
+			targetProxy = 2F3099512963D118006A967C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		2F3099262963C5DD006A967C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -336,6 +563,126 @@
 			};
 			name = Release;
 		};
+		2F3099452963D0E7006A967C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BZSC89933R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minestrone.Domain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2F3099462963D0E7006A967C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BZSC89933R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minestrone.Domain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2F3099562963D119006A967C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BZSC89933R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minestrone.NetworkPlatform;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2F3099572963D119006A967C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BZSC89933R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minestrone.NetworkPlatform;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -357,7 +704,54 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		2F3099442963D0E7006A967C /* Build configuration list for PBXNativeTarget "Domain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F3099452963D0E7006A967C /* Debug */,
+				2F3099462963D0E7006A967C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F3099552963D119006A967C /* Build configuration list for PBXNativeTarget "NetworkPlatform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F3099562963D119006A967C /* Debug */,
+				2F3099572963D119006A967C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2F30992F2963D039006A967C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F3099302963D039006A967C /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F30992F2963D039006A967C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		2F3099322963D039006A967C /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F30992F2963D039006A967C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		2F3099342963D039006A967C /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F30992F2963D039006A967C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F3099102963C5DA006A967C /* Project object */;
 }
