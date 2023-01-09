@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(windowScene: windowScene)
         
-        let rootViewController = UIViewController()
+        let viewModel = GiftsViewModel()
+        let rootViewController = GiftsViewController.create(with: viewModel)
         let navigationController = UINavigationController(rootViewController: rootViewController)
         
         self.window?.rootViewController = navigationController

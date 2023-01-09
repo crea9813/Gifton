@@ -21,6 +21,17 @@
 		2F3099502963D118006A967C /* NetworkPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F30994F2963D118006A967C /* NetworkPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F3099532963D118006A967C /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F30994D2963D118006A967C /* NetworkPlatform.framework */; };
 		2F3099542963D118006A967C /* NetworkPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F30994D2963D118006A967C /* NetworkPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2F30995E296409A7006A967C /* GiftsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30995D296409A7006A967C /* GiftsViewController.swift */; };
+		2F309961296409D7006A967C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2F309960296409D7006A967C /* SnapKit */; };
+		2F30996429640F8A006A967C /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 2F30996329640F8A006A967C /* Then */; };
+		2F87FC842965594000D72233 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87FC832965594000D72233 /* SearchField.swift */; };
+		2F87FC862966BE0400D72233 /* GiftCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87FC852966BE0400D72233 /* GiftCategoryCollectionViewCell.swift */; };
+		2F87FC882966BF0700D72233 /* GiftCategoryItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87FC872966BF0700D72233 /* GiftCategoryItemViewModel.swift */; };
+		2F87FC8A2966C2AE00D72233 /* GiftsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87FC892966C2AE00D72233 /* GiftsViewModel.swift */; };
+		2F87FC8D2966C2D400D72233 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87FC8C2966C2D400D72233 /* ViewModelType.swift */; };
+		2FB580F9296C0BF400C986A1 /* GiftItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB580F8296C0BF400C986A1 /* GiftItemViewModel.swift */; };
+		2FB580FC296C0DEE00C986A1 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB580FB296C0DEE00C986A1 /* Gift.swift */; };
+		2FB580FE296C0ED200C986A1 /* GiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB580FD296C0ED200C986A1 /* GiftTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +78,15 @@
 		2F30993E2963D0E7006A967C /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		2F30994D2963D118006A967C /* NetworkPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F30994F2963D118006A967C /* NetworkPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkPlatform.h; sourceTree = "<group>"; };
+		2F30995D296409A7006A967C /* GiftsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftsViewController.swift; sourceTree = "<group>"; };
+		2F87FC832965594000D72233 /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
+		2F87FC852966BE0400D72233 /* GiftCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		2F87FC872966BF0700D72233 /* GiftCategoryItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCategoryItemViewModel.swift; sourceTree = "<group>"; };
+		2F87FC892966C2AE00D72233 /* GiftsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftsViewModel.swift; sourceTree = "<group>"; };
+		2F87FC8C2966C2D400D72233 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		2FB580F8296C0BF400C986A1 /* GiftItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftItemViewModel.swift; sourceTree = "<group>"; };
+		2FB580FB296C0DEE00C986A1 /* Gift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
+		2FB580FD296C0ED200C986A1 /* GiftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +97,8 @@
 				2F3099422963D0E7006A967C /* Domain.framework in Frameworks */,
 				2F3099532963D118006A967C /* NetworkPlatform.framework in Frameworks */,
 				2F3099352963D039006A967C /* RxSwift in Frameworks */,
+				2F30996429640F8A006A967C /* Then in Frameworks */,
+				2F309961296409D7006A967C /* SnapKit in Frameworks */,
 				2F3099332963D039006A967C /* RxRelay in Frameworks */,
 				2F3099312963D039006A967C /* RxCocoa in Frameworks */,
 			);
@@ -122,6 +144,8 @@
 		2F30991A2963C5DA006A967C /* Gifton */ = {
 			isa = PBXGroup;
 			children = (
+				2F87FC8B2966C2CD00D72233 /* Common */,
+				2F87FC822965593700D72233 /* Utility */,
 				2F30995B29640736006A967C /* Scene */,
 				2F30991B2963C5DA006A967C /* AppDelegate.swift */,
 				2F30991D2963C5DA006A967C /* SceneDelegate.swift */,
@@ -136,6 +160,7 @@
 		2F30993D2963D0E7006A967C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				2FB580FA296C0DE200C986A1 /* Entity */,
 				2F3099582963D143006A967C /* UseCase */,
 				2F30993E2963D0E7006A967C /* Domain.h */,
 			);
@@ -184,8 +209,38 @@
 		2F30995C2964073F006A967C /* Gifts */ = {
 			isa = PBXGroup;
 			children = (
+				2F87FC852966BE0400D72233 /* GiftCategoryCollectionViewCell.swift */,
+				2F87FC872966BF0700D72233 /* GiftCategoryItemViewModel.swift */,
+				2FB580FD296C0ED200C986A1 /* GiftTableViewCell.swift */,
+				2FB580F8296C0BF400C986A1 /* GiftItemViewModel.swift */,
+				2F30995D296409A7006A967C /* GiftsViewController.swift */,
+				2F87FC892966C2AE00D72233 /* GiftsViewModel.swift */,
 			);
 			path = Gifts;
+			sourceTree = "<group>";
+		};
+		2F87FC822965593700D72233 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2F87FC832965594000D72233 /* SearchField.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		2F87FC8B2966C2CD00D72233 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2F87FC8C2966C2D400D72233 /* ViewModelType.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2FB580FA296C0DE200C986A1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2FB580FB296C0DEE00C986A1 /* Gift.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +285,8 @@
 				2F3099302963D039006A967C /* RxCocoa */,
 				2F3099322963D039006A967C /* RxRelay */,
 				2F3099342963D039006A967C /* RxSwift */,
+				2F309960296409D7006A967C /* SnapKit */,
+				2F30996329640F8A006A967C /* Then */,
 			);
 			productName = Gifton;
 			productReference = 2F3099182963C5DA006A967C /* Gifton.app */;
@@ -286,6 +343,7 @@
 					};
 					2F30993B2963D0E7006A967C = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					2F30994C2963D118006A967C = {
 						CreatedOnToolsVersion = 14.2;
@@ -303,6 +361,8 @@
 			mainGroup = 2F30990F2963C5DA006A967C;
 			packageReferences = (
 				2F30992F2963D039006A967C /* XCRemoteSwiftPackageReference "RxSwift" */,
+				2F30995F296409D7006A967C /* XCRemoteSwiftPackageReference "SnapKit" */,
+				2F30996229640F8A006A967C /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = 2F3099192963C5DA006A967C /* Products */;
 			projectDirPath = "";
@@ -346,9 +406,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F87FC8A2966C2AE00D72233 /* GiftsViewModel.swift in Sources */,
+				2F30995E296409A7006A967C /* GiftsViewController.swift in Sources */,
+				2F87FC862966BE0400D72233 /* GiftCategoryCollectionViewCell.swift in Sources */,
+				2F87FC842965594000D72233 /* SearchField.swift in Sources */,
 				2F3099202963C5DA006A967C /* ViewController.swift in Sources */,
+				2F87FC882966BF0700D72233 /* GiftCategoryItemViewModel.swift in Sources */,
 				2F30991C2963C5DA006A967C /* AppDelegate.swift in Sources */,
+				2FB580FE296C0ED200C986A1 /* GiftTableViewCell.swift in Sources */,
+				2FB580F9296C0BF400C986A1 /* GiftItemViewModel.swift in Sources */,
 				2F30991E2963C5DA006A967C /* SceneDelegate.swift in Sources */,
+				2F87FC8D2966C2D400D72233 /* ViewModelType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB580FC296C0DEE00C986A1 /* Gift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +512,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -497,7 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -510,6 +579,7 @@
 		2F30992D2963C5DD006A967C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -538,6 +608,7 @@
 		2F30992E2963C5DD006A967C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -566,6 +637,7 @@
 		2F3099452963D0E7006A967C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -586,6 +658,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -596,6 +669,7 @@
 		2F3099462963D0E7006A967C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -733,6 +807,22 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		2F30995F296409D7006A967C /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		2F30996229640F8A006A967C /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -750,6 +840,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2F30992F2963D039006A967C /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		2F309960296409D7006A967C /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F30995F296409D7006A967C /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		2F30996329640F8A006A967C /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F30996229640F8A006A967C /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
