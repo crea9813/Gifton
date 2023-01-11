@@ -18,6 +18,9 @@ final class GiftCategoryCollectionViewCell: UICollectionViewCell {
         }
     
     private let iconView = UIImageView()
+        .then {
+            $0.contentMode = .scaleAspectFit
+        }
     
     private let titleLabel = UILabel()
         .then {

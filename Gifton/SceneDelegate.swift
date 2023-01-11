@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Domain
+import NetworkPlatform
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,7 +22,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(windowScene: windowScene)
         
-        let viewModel = GiftsViewModel()
+        let useCaseProvider = NetworkPlatform.UseCaseProvider()
+        
+        let useCase = useCaseProvider.makeGiftsUseCase()
+        let viewModel = GiftsViewModel(useCase: useCase)
         let rootViewController = GiftsViewController.create(with: viewModel)
         let navigationController = UINavigationController(rootViewController: rootViewController)
         

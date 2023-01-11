@@ -15,9 +15,9 @@ final class GiftItemViewModel {
     let price: Double
     
     init(with gift: Gift) {
-        self.thumbnailImage = ""
-        self.brandName = ""
-        self.productName = ""
-        self.price = 0
+        self.thumbnailImage = gift.thumbnailImageURL
+        self.brandName = gift.brandName
+        self.productName = gift.productName
+        self.price = gift.price
     }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,9 +12,6 @@
 		2F3099202963C5DA006A967C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30991F2963C5DA006A967C /* ViewController.swift */; };
 		2F3099252963C5DD006A967C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F3099242963C5DD006A967C /* Assets.xcassets */; };
 		2F3099282963C5DD006A967C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F3099262963C5DD006A967C /* LaunchScreen.storyboard */; };
-		2F3099312963D039006A967C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3099302963D039006A967C /* RxCocoa */; };
-		2F3099332963D039006A967C /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3099322963D039006A967C /* RxRelay */; };
-		2F3099352963D039006A967C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3099342963D039006A967C /* RxSwift */; };
 		2F30993F2963D0E7006A967C /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F30993E2963D0E7006A967C /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F3099422963D0E7006A967C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F30993C2963D0E7006A967C /* Domain.framework */; };
 		2F3099432963D0E7006A967C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F30993C2963D0E7006A967C /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -22,8 +19,6 @@
 		2F3099532963D118006A967C /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F30994D2963D118006A967C /* NetworkPlatform.framework */; };
 		2F3099542963D118006A967C /* NetworkPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F30994D2963D118006A967C /* NetworkPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2F30995E296409A7006A967C /* GiftsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30995D296409A7006A967C /* GiftsViewController.swift */; };
-		2F309961296409D7006A967C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2F309960296409D7006A967C /* SnapKit */; };
-		2F30996429640F8A006A967C /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 2F30996329640F8A006A967C /* Then */; };
 		2F87FC842965594000D72233 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87FC832965594000D72233 /* SearchField.swift */; };
 		2F87FC862966BE0400D72233 /* GiftCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87FC852966BE0400D72233 /* GiftCategoryCollectionViewCell.swift */; };
 		2F87FC882966BF0700D72233 /* GiftCategoryItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87FC872966BF0700D72233 /* GiftCategoryItemViewModel.swift */; };
@@ -31,7 +26,22 @@
 		2F87FC8D2966C2D400D72233 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87FC8C2966C2D400D72233 /* ViewModelType.swift */; };
 		2FB580F9296C0BF400C986A1 /* GiftItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB580F8296C0BF400C986A1 /* GiftItemViewModel.swift */; };
 		2FB580FC296C0DEE00C986A1 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB580FB296C0DEE00C986A1 /* Gift.swift */; };
-		2FB580FE296C0ED200C986A1 /* GiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB580FD296C0ED200C986A1 /* GiftTableViewCell.swift */; };
+		2FB580FE296C0ED200C986A1 /* GiftCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB580FD296C0ED200C986A1 /* GiftCollectionViewCell.swift */; };
+		2FB58100296CED8300C986A1 /* GiftsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB580FF296CED8300C986A1 /* GiftsUseCase.swift */; };
+		2FB58103296CFA7900C986A1 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB58102296CFA7900C986A1 /* UseCaseProvider.swift */; };
+		2FB58105296CFAA900C986A1 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB58104296CFAA900C986A1 /* UseCaseProvider.swift */; };
+		2FB58107296CFB1900C986A1 /* GiftsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB58106296CFB1900C986A1 /* GiftsUseCase.swift */; };
+		2FB5810A296CFDE700C986A1 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB58109296CFDE700C986A1 /* Network.swift */; };
+		2FB58113296D057400C986A1 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB58112296D057400C986A1 /* BaseResponse.swift */; };
+		2FB58115296D064400C986A1 /* AnyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB58114296D064400C986A1 /* AnyDecodable.swift */; };
+		2FB58117296D0CCA00C986A1 /* GiftsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB58116296D0CCA00C986A1 /* GiftsNavigator.swift */; };
+		2FB58119296D3E1100C986A1 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB58118296D3E1100C986A1 /* ActivityIndicator.swift */; };
+		2FB5811B296D3E3800C986A1 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5811A296D3E3800C986A1 /* ErrorTracker.swift */; };
+		2FB5811D296D3F5D00C986A1 /* Observable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5811C296D3F5D00C986A1 /* Observable+Extension.swift */; };
+		2FB58121296D404700C986A1 /* GiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB58120296D404700C986A1 /* GiftError.swift */; };
+		75F78C28CDC9B92373BE591A /* Pods_NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A015A6795825C195E9C8769A /* Pods_NetworkPlatform.framework */; };
+		9F88A13FDFAF5969794CA3DF /* Pods_Gifton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB585169A5A24C0317C3A8F3 /* Pods_Gifton.framework */; };
+		D387C92C3BDBCBF9F5B88798 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FD15A11F470D6A47F49106 /* Pods_Domain.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +77,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		037E96EF14F61DE5B84AD04C /* Pods-NetworkPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatform.debug.xcconfig"; path = "Target Support Files/Pods-NetworkPlatform/Pods-NetworkPlatform.debug.xcconfig"; sourceTree = "<group>"; };
+		18A31A7C7FCC534056FB973C /* Pods-Gifton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gifton.debug.xcconfig"; path = "Target Support Files/Pods-Gifton/Pods-Gifton.debug.xcconfig"; sourceTree = "<group>"; };
 		2F3099182963C5DA006A967C /* Gifton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gifton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F30991B2963C5DA006A967C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F30991D2963C5DA006A967C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +98,26 @@
 		2F87FC8C2966C2D400D72233 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		2FB580F8296C0BF400C986A1 /* GiftItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftItemViewModel.swift; sourceTree = "<group>"; };
 		2FB580FB296C0DEE00C986A1 /* Gift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
-		2FB580FD296C0ED200C986A1 /* GiftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftTableViewCell.swift; sourceTree = "<group>"; };
+		2FB580FD296C0ED200C986A1 /* GiftCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCollectionViewCell.swift; sourceTree = "<group>"; };
+		2FB580FF296CED8300C986A1 /* GiftsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftsUseCase.swift; sourceTree = "<group>"; };
+		2FB58102296CFA7900C986A1 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
+		2FB58104296CFAA900C986A1 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
+		2FB58106296CFB1900C986A1 /* GiftsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftsUseCase.swift; sourceTree = "<group>"; };
+		2FB58109296CFDE700C986A1 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		2FB58112296D057400C986A1 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		2FB58114296D064400C986A1 /* AnyDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDecodable.swift; sourceTree = "<group>"; };
+		2FB58116296D0CCA00C986A1 /* GiftsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftsNavigator.swift; sourceTree = "<group>"; };
+		2FB58118296D3E1100C986A1 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		2FB5811A296D3E3800C986A1 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		2FB5811C296D3F5D00C986A1 /* Observable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
+		2FB58120296D404700C986A1 /* GiftError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftError.swift; sourceTree = "<group>"; };
+		4C83054415AD78D5CE45C623 /* Pods-Gifton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gifton.release.xcconfig"; path = "Target Support Files/Pods-Gifton/Pods-Gifton.release.xcconfig"; sourceTree = "<group>"; };
+		51E7F6BDEC88112CE145786C /* Pods-NetworkPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatform.release.xcconfig"; path = "Target Support Files/Pods-NetworkPlatform/Pods-NetworkPlatform.release.xcconfig"; sourceTree = "<group>"; };
+		61B7F435F36F89633CB757CF /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
+		73518FE95CFB1BA5EF638E4E /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
+		A015A6795825C195E9C8769A /* Pods_NetworkPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4FD15A11F470D6A47F49106 /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB585169A5A24C0317C3A8F3 /* Pods_Gifton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gifton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,11 +127,7 @@
 			files = (
 				2F3099422963D0E7006A967C /* Domain.framework in Frameworks */,
 				2F3099532963D118006A967C /* NetworkPlatform.framework in Frameworks */,
-				2F3099352963D039006A967C /* RxSwift in Frameworks */,
-				2F30996429640F8A006A967C /* Then in Frameworks */,
-				2F309961296409D7006A967C /* SnapKit in Frameworks */,
-				2F3099332963D039006A967C /* RxRelay in Frameworks */,
-				2F3099312963D039006A967C /* RxCocoa in Frameworks */,
+				9F88A13FDFAF5969794CA3DF /* Pods_Gifton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D387C92C3BDBCBF9F5B88798 /* Pods_Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75F78C28CDC9B92373BE591A /* Pods_NetworkPlatform.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +157,8 @@
 				2F30993D2963D0E7006A967C /* Domain */,
 				2F30994E2963D118006A967C /* NetworkPlatform */,
 				2F3099192963C5DA006A967C /* Products */,
+				2FB58122296D42DF00C986A1 /* Frameworks */,
+				362338C0FB00457120927FE3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +203,7 @@
 			children = (
 				2F30995A2963F913006A967C /* API */,
 				2F3099592963F88D006A967C /* Network */,
+				2FB58108296CFB2100C986A1 /* UseCase */,
 				2F30994F2963D118006A967C /* NetworkPlatform.h */,
 			);
 			path = NetworkPlatform;
@@ -180,6 +212,8 @@
 		2F3099582963D143006A967C /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				2FB580FF296CED8300C986A1 /* GiftsUseCase.swift */,
+				2FB58104296CFAA900C986A1 /* UseCaseProvider.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -187,6 +221,9 @@
 		2F3099592963F88D006A967C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2FB58109296CFDE700C986A1 /* Network.swift */,
+				2FB58112296D057400C986A1 /* BaseResponse.swift */,
+				2FB58114296D064400C986A1 /* AnyDecodable.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -211,10 +248,11 @@
 			children = (
 				2F87FC852966BE0400D72233 /* GiftCategoryCollectionViewCell.swift */,
 				2F87FC872966BF0700D72233 /* GiftCategoryItemViewModel.swift */,
-				2FB580FD296C0ED200C986A1 /* GiftTableViewCell.swift */,
+				2FB580FD296C0ED200C986A1 /* GiftCollectionViewCell.swift */,
 				2FB580F8296C0BF400C986A1 /* GiftItemViewModel.swift */,
 				2F30995D296409A7006A967C /* GiftsViewController.swift */,
 				2F87FC892966C2AE00D72233 /* GiftsViewModel.swift */,
+				2FB58116296D0CCA00C986A1 /* GiftsNavigator.swift */,
 			);
 			path = Gifts;
 			sourceTree = "<group>";
@@ -223,6 +261,9 @@
 			isa = PBXGroup;
 			children = (
 				2F87FC832965594000D72233 /* SearchField.swift */,
+				2FB58118296D3E1100C986A1 /* ActivityIndicator.swift */,
+				2FB5811A296D3E3800C986A1 /* ErrorTracker.swift */,
+				2FB5811C296D3F5D00C986A1 /* Observable+Extension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -239,8 +280,42 @@
 			isa = PBXGroup;
 			children = (
 				2FB580FB296C0DEE00C986A1 /* Gift.swift */,
+				2FB58120296D404700C986A1 /* GiftError.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		2FB58108296CFB2100C986A1 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				2FB58106296CFB1900C986A1 /* GiftsUseCase.swift */,
+				2FB58102296CFA7900C986A1 /* UseCaseProvider.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		2FB58122296D42DF00C986A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4FD15A11F470D6A47F49106 /* Pods_Domain.framework */,
+				FB585169A5A24C0317C3A8F3 /* Pods_Gifton.framework */,
+				A015A6795825C195E9C8769A /* Pods_NetworkPlatform.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		362338C0FB00457120927FE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73518FE95CFB1BA5EF638E4E /* Pods-Domain.debug.xcconfig */,
+				61B7F435F36F89633CB757CF /* Pods-Domain.release.xcconfig */,
+				18A31A7C7FCC534056FB973C /* Pods-Gifton.debug.xcconfig */,
+				4C83054415AD78D5CE45C623 /* Pods-Gifton.release.xcconfig */,
+				037E96EF14F61DE5B84AD04C /* Pods-NetworkPlatform.debug.xcconfig */,
+				51E7F6BDEC88112CE145786C /* Pods-NetworkPlatform.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,10 +344,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F30992C2963C5DD006A967C /* Build configuration list for PBXNativeTarget "Gifton" */;
 			buildPhases = (
+				7C9975A363A147D99587852E /* [CP] Check Pods Manifest.lock */,
 				2F3099142963C5DA006A967C /* Sources */,
 				2F3099152963C5DA006A967C /* Frameworks */,
 				2F3099162963C5DA006A967C /* Resources */,
 				2F3099472963D0E7006A967C /* Embed Frameworks */,
+				7E491BB0E239FACD1E30CA96 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,13 +358,6 @@
 				2F3099522963D118006A967C /* PBXTargetDependency */,
 			);
 			name = Gifton;
-			packageProductDependencies = (
-				2F3099302963D039006A967C /* RxCocoa */,
-				2F3099322963D039006A967C /* RxRelay */,
-				2F3099342963D039006A967C /* RxSwift */,
-				2F309960296409D7006A967C /* SnapKit */,
-				2F30996329640F8A006A967C /* Then */,
-			);
 			productName = Gifton;
 			productReference = 2F3099182963C5DA006A967C /* Gifton.app */;
 			productType = "com.apple.product-type.application";
@@ -296,6 +366,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F3099442963D0E7006A967C /* Build configuration list for PBXNativeTarget "Domain" */;
 			buildPhases = (
+				91B8F7CA844C7C07573A5769 /* [CP] Check Pods Manifest.lock */,
 				2F3099372963D0E7006A967C /* Headers */,
 				2F3099382963D0E7006A967C /* Sources */,
 				2F3099392963D0E7006A967C /* Frameworks */,
@@ -314,6 +385,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F3099552963D119006A967C /* Build configuration list for PBXNativeTarget "NetworkPlatform" */;
 			buildPhases = (
+				EF79938FABEB20074B424289 /* [CP] Check Pods Manifest.lock */,
 				2F3099482963D118006A967C /* Headers */,
 				2F3099492963D118006A967C /* Sources */,
 				2F30994A2963D118006A967C /* Frameworks */,
@@ -347,11 +419,12 @@
 					};
 					2F30994C2963D118006A967C = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
 			buildConfigurationList = 2F3099132963C5DA006A967C /* Build configuration list for PBXProject "Gifton" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -359,11 +432,6 @@
 				Base,
 			);
 			mainGroup = 2F30990F2963C5DA006A967C;
-			packageReferences = (
-				2F30992F2963D039006A967C /* XCRemoteSwiftPackageReference "RxSwift" */,
-				2F30995F296409D7006A967C /* XCRemoteSwiftPackageReference "SnapKit" */,
-				2F30996229640F8A006A967C /* XCRemoteSwiftPackageReference "Then" */,
-			);
 			productRefGroup = 2F3099192963C5DA006A967C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -401,6 +469,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7C9975A363A147D99587852E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gifton-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E491BB0E239FACD1E30CA96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gifton/Pods-Gifton-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gifton/Pods-Gifton-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gifton/Pods-Gifton-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91B8F7CA844C7C07573A5769 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Domain-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF79938FABEB20074B424289 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetworkPlatform-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2F3099142963C5DA006A967C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -410,11 +564,15 @@
 				2F30995E296409A7006A967C /* GiftsViewController.swift in Sources */,
 				2F87FC862966BE0400D72233 /* GiftCategoryCollectionViewCell.swift in Sources */,
 				2F87FC842965594000D72233 /* SearchField.swift in Sources */,
+				2FB58119296D3E1100C986A1 /* ActivityIndicator.swift in Sources */,
 				2F3099202963C5DA006A967C /* ViewController.swift in Sources */,
 				2F87FC882966BF0700D72233 /* GiftCategoryItemViewModel.swift in Sources */,
+				2FB5811B296D3E3800C986A1 /* ErrorTracker.swift in Sources */,
 				2F30991C2963C5DA006A967C /* AppDelegate.swift in Sources */,
-				2FB580FE296C0ED200C986A1 /* GiftTableViewCell.swift in Sources */,
+				2FB58117296D0CCA00C986A1 /* GiftsNavigator.swift in Sources */,
+				2FB580FE296C0ED200C986A1 /* GiftCollectionViewCell.swift in Sources */,
 				2FB580F9296C0BF400C986A1 /* GiftItemViewModel.swift in Sources */,
+				2FB5811D296D3F5D00C986A1 /* Observable+Extension.swift in Sources */,
 				2F30991E2963C5DA006A967C /* SceneDelegate.swift in Sources */,
 				2F87FC8D2966C2D400D72233 /* ViewModelType.swift in Sources */,
 			);
@@ -425,6 +583,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FB580FC296C0DEE00C986A1 /* Gift.swift in Sources */,
+				2FB58105296CFAA900C986A1 /* UseCaseProvider.swift in Sources */,
+				2FB58121296D404700C986A1 /* GiftError.swift in Sources */,
+				2FB58100296CED8300C986A1 /* GiftsUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +593,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB58115296D064400C986A1 /* AnyDecodable.swift in Sources */,
+				2FB58113296D057400C986A1 /* BaseResponse.swift in Sources */,
+				2FB58103296CFA7900C986A1 /* UseCaseProvider.swift in Sources */,
+				2FB58107296CFB1900C986A1 /* GiftsUseCase.swift in Sources */,
+				2FB5810A296CFDE700C986A1 /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +744,7 @@
 		};
 		2F30992D2963C5DD006A967C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18A31A7C7FCC534056FB973C /* Pods-Gifton.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -607,6 +774,7 @@
 		};
 		2F30992E2963C5DD006A967C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C83054415AD78D5CE45C623 /* Pods-Gifton.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -636,6 +804,7 @@
 		};
 		2F3099452963D0E7006A967C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73518FE95CFB1BA5EF638E4E /* Pods-Domain.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -668,6 +837,7 @@
 		};
 		2F3099462963D0E7006A967C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61B7F435F36F89633CB757CF /* Pods-Domain.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -699,11 +869,13 @@
 		};
 		2F3099562963D119006A967C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 037E96EF14F61DE5B84AD04C /* Pods-NetworkPlatform.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = BZSC89933R;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -720,6 +892,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -729,11 +902,13 @@
 		};
 		2F3099572963D119006A967C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51E7F6BDEC88112CE145786C /* Pods-NetworkPlatform.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = BZSC89933R;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -797,61 +972,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		2F30992F2963D039006A967C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-		2F30995F296409D7006A967C /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit";
-			requirement = {
-				branch = develop;
-				kind = branch;
-			};
-		};
-		2F30996229640F8A006A967C /* XCRemoteSwiftPackageReference "Then" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/devxoul/Then";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2F3099302963D039006A967C /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2F30992F2963D039006A967C /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		2F3099322963D039006A967C /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2F30992F2963D039006A967C /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		2F3099342963D039006A967C /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2F30992F2963D039006A967C /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		2F309960296409D7006A967C /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2F30995F296409D7006A967C /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		2F30996329640F8A006A967C /* Then */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2F30996229640F8A006A967C /* XCRemoteSwiftPackageReference "Then" */;
-			productName = Then;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F3099102963C5DA006A967C /* Project object */;
 }
