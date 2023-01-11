@@ -30,20 +30,20 @@ final class GiftCollectionViewCell: UICollectionViewCell {
     
     private let brandNameLabel = UILabel()
         .then {
-            $0.font = .systemFont(ofSize: 13, weight: .regular)
+            $0.font = .montFont(ofSize: 12, weight: .regular)
             $0.textColor = UIColor(hex: "AEAEB2")
         }
     
     private let productNameLabel = UILabel()
         .then {
-            $0.font = .systemFont(ofSize: 14, weight: .medium)
+            $0.font = .montFont(ofSize: 16, weight: .semibold)
             $0.textColor = UIColor(hex: "66554F")
             $0.numberOfLines = 2
         }
     
     private let priceLabel = UILabel()
         .then {
-            $0.font = .systemFont(ofSize: 13, weight: .medium)
+            $0.font = .montFont(ofSize: 14, weight: .semibold)
             $0.textColor = UIColor(hex: "66554F")
         }
     
@@ -86,19 +86,19 @@ final class GiftCollectionViewCell: UICollectionViewCell {
         
         brandNameLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(8)
-            $0.leading.equalToSuperview().inset(10)
+            $0.leading.trailing.equalToSuperview().inset(10)
         }
         
         productNameLabel.snp.makeConstraints {
-            $0.top.equalTo(brandNameLabel.snp.bottom)
-            $0.height.equalTo(33)
+            $0.top.equalTo(brandNameLabel.snp.bottom).offset(4)
+            $0.height.lessThanOrEqualTo(35)
             $0.leading.trailing.equalToSuperview().inset(10)
         }
         
         priceLabel.snp.makeConstraints {
-            $0.top.equalTo(productNameLabel.snp.bottom)
-            $0.leading.equalToSuperview().inset(10)
-            $0.bottom.equalToSuperview().inset(5)
+            $0.top.greaterThanOrEqualTo(productNameLabel.snp.bottom)
+            $0.trailing.equalToSuperview().inset(10)
+            $0.bottom.equalToSuperview().inset(8)
         }
         
         let shapeLayer = CAShapeLayer()

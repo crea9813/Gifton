@@ -13,6 +13,8 @@ final class GiftsViewModel: ViewModelType {
  
     struct Input {
         let loadGifts: Driver<Void>
+        
+        let didSelectGift: Driver<IndexPath>
     }
     
     struct Output {
@@ -20,15 +22,20 @@ final class GiftsViewModel: ViewModelType {
         
         let gifts: Driver<[GiftItemViewModel]>
         
+        let selectGift: Driver<Gift>
+        
         let fetching: Driver<Bool>
         
         let error: Driver<GiftError>
     }
     
     private let useCase: GiftsUseCase
+    private let coordinator: GiftsCoordinator
     
-    init(useCase: GiftsUseCase) {
+    init(useCase: GiftsUseCase,
+         coordinator: GiftsCoordinator) {
         self.useCase = useCase
+        self.coordinator = coordinator
     }
     
     func transform(input: Input) -> Output {
@@ -53,8 +60,15 @@ final class GiftsViewModel: ViewModelType {
                 .map { $0.map { GiftItemViewModel(with: $0) } }
         }
         
+        let selectGift = input.didSelectGift
+            .withLatestFrom(gifts) { (indexPath, gifts) -> Gift in
+                return gifts[indexPath.row].gift
+            }
+            .do(onNext: coordinator.showGift)
+        
         return Output(categories: categories,
                       gifts: gifts,
+                      selectGift: selectGift,
                       fetching: fetching,
                       error: errors)
     }

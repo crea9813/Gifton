@@ -22,15 +22,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(windowScene: windowScene)
         
-        let useCaseProvider = NetworkPlatform.UseCaseProvider()
+        let container = NetworkPlatform.UseCaseProvider()
+        let navigationController = UINavigationController()
         
-        let useCase = useCaseProvider.makeGiftsUseCase()
-        let viewModel = GiftsViewModel(useCase: useCase)
-        let rootViewController = GiftsViewController.create(with: viewModel)
-        let navigationController = UINavigationController(rootViewController: rootViewController)
+        let appCoordinator = DefaultGiftsCoordinator(navigationController: navigationController,
+                                                     container: container)
+        
         
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
+        
+        appCoordinator.showGifts()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

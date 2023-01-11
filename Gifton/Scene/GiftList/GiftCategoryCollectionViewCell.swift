@@ -26,6 +26,7 @@ final class GiftCategoryCollectionViewCell: UICollectionViewCell {
         .then {
             $0.textColor = UIColor(hex: "66554F")
             $0.textAlignment = .center
+            $0.font = .montFont(ofSize: 14, weight: .medium)
         }
     
     func bind(with viewModel: GiftCategoryItemViewModel) {

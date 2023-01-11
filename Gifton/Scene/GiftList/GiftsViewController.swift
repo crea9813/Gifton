@@ -52,7 +52,7 @@ final class GiftsViewController: UIViewController {
     }()
     
     private let tableTitleLabel = UILabel().then {
-        $0.font = .systemFont(ofSize: 24, weight: .bold)
+        $0.font = .montFont(ofSize: 24, weight: .bold)
         $0.textColor = UIColor(hex: "66554F")
         $0.text = "Most Popular"
     }
@@ -79,6 +79,12 @@ final class GiftsViewController: UIViewController {
         bind()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+        self.title = "Gifton"
+    }
+    
     private func configureGiftCollectionView() {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.estimatedItemSize = CGSize(width: (giftCollectionView.frame.size.width - 62) / 2, height: 250)
@@ -94,7 +100,10 @@ final class GiftsViewController: UIViewController {
             .mapToVoid()
             .asDriverOnErrorJustComplete()
         
-        let input = GiftsViewModel.Input(loadGifts: viewWillAppear)
+        let didSelectCell = self.giftCollectionView.rx.itemSelected.asDriver()
+        
+        let input = GiftsViewModel.Input(loadGifts: viewWillAppear,
+                                         didSelectGift: didSelectCell)
         
         let output = viewModel.transform(input: input)
         
@@ -129,11 +138,15 @@ final class GiftsViewController: UIViewController {
                 }
             })
             .disposed(by: disposeBag)
+        
+        output.selectGift.drive().disposed(by: disposeBag)
     }
     
     private func setupUI() {
-        
-        self.navigationController?.isNavigationBarHidden = true
+        for family in UIFont.familyNames.sorted() {
+            let names = UIFont.fontNames(forFamilyName: family)
+            print("Family: \(family) Font names: \(names)")
+        }
         
         self.view.addSubview(searchBar)
         self.view.addSubview(filterButton)
@@ -155,7 +168,7 @@ final class GiftsViewController: UIViewController {
         }
         
         self.scrollView.snp.makeConstraints {
-            $0.top.equalTo(self.searchBar.snp.bottom).offset(30)
+            $0.top.equalTo(self.searchBar.snp.bottom).offset(16)
             $0.leading.trailing.bottom.equalToSuperview()
         }
         
@@ -166,7 +179,7 @@ final class GiftsViewController: UIViewController {
         }
         
         self.tableTitleLabel.snp.makeConstraints {
-            $0.top.equalTo(categoriesCollectionView.snp.bottom).offset(25)
+            $0.top.equalTo(categoriesCollectionView.snp.bottom).offset(16)
             $0.leading.equalToSuperview().inset(25)
         }
         

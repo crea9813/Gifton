@@ -9,16 +9,18 @@ import Foundation
 
 public struct Gift: Codable {
     public let thumbnailImageURL: String
-    public let brandName, productName: String
+    public let brandName, productName, productDetail: String
     public let price: Double
     
     public init(thumbnailImageURL: String,
                 brandName: String,
                 productName: String,
-                price: Double) {
+                price: Double,
+                productDetail: String) {
         self.thumbnailImageURL = thumbnailImageURL
         self.brandName = brandName
         self.productName = productName
         self.price = price
+        self.productDetail = productDetail
     }
 }

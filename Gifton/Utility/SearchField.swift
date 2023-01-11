@@ -15,10 +15,10 @@ final class SearchField: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        self.font = .montFont(ofSize: 16, weight: .medium)
         
         self.attributedPlaceholder = NSAttributedString(string: "Search Store or Items", attributes: [
-            .font: UIFont.systemFont(ofSize: 16, weight: .medium),
+            .font: UIFont.montFont(ofSize: 16, weight: .medium),
             .foregroundColor: UIColor(red: 0.698, green: 0.698, blue: 0.698, alpha: 1)])
         self.layer.cornerRadius = 15
         
