@@ -22,6 +22,10 @@ final class GiftDetailViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
     
+    private let contactPicker = CNContactPickerViewController().then {
+        $0.displayedPropertyKeys = [CNContactGivenNameKey, CNContactPhoneNumbersKey]
+    }
+    
     private var statusBar: UIView!
     
     private let productImageView = UIImageView()
@@ -88,15 +92,12 @@ final class GiftDetailViewController: UIViewController {
         self.bind()
     }
     
-    private func selectTargetFromContact() {
-        let contactPicker = CNContactPickerViewController()
-        self.present(contactPicker, animated: true)
-    }
-    
     private func bind() {
         assert(viewModel != nil)
         
-        let input = GiftDetailViewModel.Input()
+        let didSendGift = self.contactPicker.rx.didSelect.asDriverOnErrorJustComplete()
+        
+        let input = GiftDetailViewModel.Input(didSendGift: didSendGift)
         
         let output = viewModel.transform(input: input)
         
@@ -106,6 +107,14 @@ final class GiftDetailViewController: UIViewController {
             self.productNameLabel.text = gift.productName
             self.priceLabel.text = "$ \(gift.price)"
             self.productDetailLabel.text = gift.productDetail
+        }).disposed(by: disposeBag)
+        
+        output.sendGift.drive().disposed(by: disposeBag)
+        
+        sendButton.rx.tap.asDriver().drive(onNext: {
+            [weak self] in
+            guard let self = self else { return }
+            self.present(self.contactPicker, animated: true)
         }).disposed(by: disposeBag)
         
         scrollView.rx.didScroll.asDriver().drive(onNext: {
@@ -122,14 +131,6 @@ final class GiftDetailViewController: UIViewController {
             self.statusBar.backgroundColor = UIColor(hue: 1, saturation: 0, brightness: 1, alpha: offset)
             
         }).disposed(by: disposeBag)
-        
-        sendButton.rx.tap
-            .asDriver()
-            .drive(onNext: {
-                [weak self] in
-                guard let self = self else { return }
-                self.selectTargetFromContact()
-            }).disposed(by: disposeBag)
     }
     
     private func setupUI() {
@@ -141,12 +142,6 @@ final class GiftDetailViewController: UIViewController {
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
-//        if #available(iOS 14.0, *) {
-//            navigationController?.navigationItem.backButtonDisplayMode = .minimal
-//        } else {
-//            // Fallback on earlier versions
-//            ㅜ
-//        }
         
         statusBar = UIView(frame: UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame ?? .zero)
         statusBar.isOpaque = false
@@ -224,3 +219,5 @@ final class GiftDetailViewController: UIViewController {
         separator.layer.addSublayer(shapeLayer)
     }
 }
+
+

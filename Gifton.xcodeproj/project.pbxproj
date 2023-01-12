@@ -53,6 +53,7 @@
 		2FBD4A70296E6C6A00E5A915 /* GiftDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD4A6F296E6C6A00E5A915 /* GiftDetailCoordinator.swift */; };
 		2FBD4A72296E6E7400E5A915 /* GiftDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD4A71296E6E7400E5A915 /* GiftDetailViewModel.swift */; };
 		2FBD4A74296E797900E5A915 /* PaddingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD4A73296E797900E5A915 /* PaddingButton.swift */; };
+		2FBD4A78296FA70400E5A915 /* CNContactPickerViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD4A77296FA70400E5A915 /* CNContactPickerViewController+Rx.swift */; };
 		75F78C28CDC9B92373BE591A /* Pods_NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A015A6795825C195E9C8769A /* Pods_NetworkPlatform.framework */; };
 		9F88A13FDFAF5969794CA3DF /* Pods_Gifton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB585169A5A24C0317C3A8F3 /* Pods_Gifton.framework */; };
 		D387C92C3BDBCBF9F5B88798 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FD15A11F470D6A47F49106 /* Pods_Domain.framework */; };
@@ -139,6 +140,7 @@
 		2FBD4A6F296E6C6A00E5A915 /* GiftDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftDetailCoordinator.swift; sourceTree = "<group>"; };
 		2FBD4A71296E6E7400E5A915 /* GiftDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftDetailViewModel.swift; sourceTree = "<group>"; };
 		2FBD4A73296E797900E5A915 /* PaddingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingButton.swift; sourceTree = "<group>"; };
+		2FBD4A77296FA70400E5A915 /* CNContactPickerViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CNContactPickerViewController+Rx.swift"; sourceTree = "<group>"; };
 		4C83054415AD78D5CE45C623 /* Pods-Gifton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gifton.release.xcconfig"; path = "Target Support Files/Pods-Gifton/Pods-Gifton.release.xcconfig"; sourceTree = "<group>"; };
 		51E7F6BDEC88112CE145786C /* Pods-NetworkPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatform.release.xcconfig"; path = "Target Support Files/Pods-NetworkPlatform/Pods-NetworkPlatform.release.xcconfig"; sourceTree = "<group>"; };
 		61B7F435F36F89633CB757CF /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				2FBD4A68296E4B9D00E5A915 /* UIFont+Extension.swift */,
 				2FBD4A6A296E534E00E5A915 /* Coordinator.swift */,
 				2FBD4A73296E797900E5A915 /* PaddingButton.swift */,
+				2FBD4A77296FA70400E5A915 /* CNContactPickerViewController+Rx.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F87FC8A2966C2AE00D72233 /* GiftsViewModel.swift in Sources */,
+				2FBD4A78296FA70400E5A915 /* CNContactPickerViewController+Rx.swift in Sources */,
 				2FBD4A72296E6E7400E5A915 /* GiftDetailViewModel.swift in Sources */,
 				2F30995E296409A7006A967C /* GiftsViewController.swift in Sources */,
 				2F87FC862966BE0400D72233 /* GiftCategoryCollectionViewCell.swift in Sources */,

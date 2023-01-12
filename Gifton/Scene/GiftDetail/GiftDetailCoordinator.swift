@@ -26,7 +26,8 @@ class DefaultGiftDetailCoordinator: GiftDetailCoordinator {
     }
     
     func showContact() {
-        
+        let view = ContactPickerViewController()
+        navigationController.present(view, animated: true)
     }
     
     func toCreateCard() {

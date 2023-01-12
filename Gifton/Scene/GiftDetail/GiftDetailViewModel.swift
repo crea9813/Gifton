@@ -8,15 +8,18 @@
 import Domain
 import RxSwift
 import RxCocoa
+import Contacts
 
 final class GiftDetailViewModel: ViewModelType {
     
     struct Input {
-        
+        let didSendGift: Driver<CNContact>
     }
     
     struct Output {
         let gift: Driver<Gift>
+        
+        let sendGift: Driver<CNContact>
         
         let fetching: Driver<Bool>
         
@@ -44,7 +47,13 @@ final class GiftDetailViewModel: ViewModelType {
         
         let gift = Driver.just(self.gift)
         
+        let didSendGift = input.didSendGift
+            .do(onNext: {
+                print($0)
+            })
+        
         return Output(gift: gift,
+                      sendGift: didSendGift,
                       fetching: fetching,
                       error: errors)
     }
