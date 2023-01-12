@@ -7,10 +7,10 @@
 
 import UIKit
 import Domain
+import Contacts
 
 protocol GiftDetailCoordinator: Coordinator {
-    func showContact()
-    func toCreateCard()
+    func toCreateCard(gift: Gift, contact: CNContact)
 }
 
 class DefaultGiftDetailCoordinator: GiftDetailCoordinator {
@@ -24,13 +24,12 @@ class DefaultGiftDetailCoordinator: GiftDetailCoordinator {
         self.navigationController = navigationController
         self.container = container
     }
-    
-    func showContact() {
-        let view = ContactPickerViewController()
-        navigationController.present(view, animated: true)
-    }
-    
-    func toCreateCard() {
-        
+
+    func toCreateCard(gift: Gift, contact: CNContact) {
+        let coordinator = DefaultGiftCardCoordinator(navigationController: navigationController, container: container)
+        let viewModel = GiftCardViewModel(useCase: container.makeGiftsUseCase(),
+                                          coordinator: coordinator)
+        let view = GiftCardViewController.create(with: viewModel)
+        navigationController.pushViewController(view, animated: true)
     }
 }

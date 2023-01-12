@@ -1,39 +1,35 @@
 //
-//  GiftDetailViewModel.swift
+//  GiftCardViewModel.swift
 //  Gifton
 //
-//  Created by SuperMove on 2023/01/11.
+//  Created by SuperMove on 2023/01/12.
 //
 
 import Domain
 import RxSwift
 import RxCocoa
-import Contacts
 
-final class GiftDetailViewModel: ViewModelType {
-    
+final class GiftCardViewModel: ViewModelType {
+ 
     struct Input {
-        let didSendGift: Driver<CNContact>
+        let didSendGift: Driver<Void>
     }
     
     struct Output {
-        let gift: Driver<Gift>
+        let cards: Driver<[GiftCardItemViewModel]>
         
-        let sendGift: Driver<(Gift, CNContact)>
+        let sendGift: Driver<Void>
         
         let fetching: Driver<Bool>
         
         let error: Driver<GiftError>
     }
     
-    private let gift: Gift
     private let useCase: GiftsUseCase
-    private let coordinator: GiftDetailCoordinator
+    private let coordinator: GiftCardCoordinator
     
-    init(gift: Gift,
-         useCase: GiftsUseCase,
-         coordinator: GiftDetailCoordinator) {
-        self.gift = gift
+    init(useCase: GiftsUseCase,
+         coordinator: GiftCardCoordinator) {
         self.useCase = useCase
         self.coordinator = coordinator
     }
@@ -45,17 +41,19 @@ final class GiftDetailViewModel: ViewModelType {
         let fetching = activityIndicator.asDriver()
         let errors = errorTracker.compactMap({ $0 as? GiftError }).asDriver()
         
-        let gift = Driver.just(self.gift)
-        
-        let giftAndContact = Driver.combineLatest(gift, input.didSendGift)
+        let cards = Driver<[GiftCardItemViewModel]>
+            .just([GiftCardItemViewModel(with: "gift_card_1"),
+                   GiftCardItemViewModel(with: "gift_card_2"),
+                   GiftCardItemViewModel(with: "gift_card_3")
+                  ])
         
         let didSendGift = input.didSendGift
-            .withLatestFrom(giftAndContact)
-            .do(onNext: self.coordinator.toCreateCard)
+            .do(onNext: coordinator.toConfirmOrder)
         
-        return Output(gift: gift,
+        return Output(cards: cards,
                       sendGift: didSendGift,
                       fetching: fetching,
                       error: errors)
     }
 }
+
