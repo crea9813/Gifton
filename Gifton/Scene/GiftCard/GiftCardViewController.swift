@@ -86,7 +86,10 @@ final class GiftCardViewController: UIViewController {
         
         let didSendGift = self.sendButton.rx.tap.asDriver()
         
-        let input = GiftCardViewModel.Input(didSendGift: didSendGift)
+        let message = self.messageTextField.rx.text.orEmpty.asDriver()
+        
+        let input = GiftCardViewModel.Input(didSendGift: didSendGift,
+                                            message: message)
         
         let output = viewModel.transform(input: input)
         

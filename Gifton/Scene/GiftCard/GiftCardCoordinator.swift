@@ -25,6 +25,7 @@ class DefaultGiftCardCoordinator: GiftCardCoordinator {
     }
     
     func toConfirmOrder() {
-        
+        let view = GiftConfirmViewController()
+        self.navigationController.pushViewController(view, animated: true)
     }
 }

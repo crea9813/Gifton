@@ -86,6 +86,11 @@ final class GiftDetailViewController: UIViewController {
             $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
         }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
@@ -95,7 +100,9 @@ final class GiftDetailViewController: UIViewController {
     private func bind() {
         assert(viewModel != nil)
         
-        let didSendGift = self.contactPicker.rx.didSelect.asDriverOnErrorJustComplete()
+        let didSendGift = self.contactPicker.rx.didSelect
+            .compactMap { $0.phoneNumbers.first?.value.value(forKey: "digits") as? String }
+            .asDriverOnErrorJustComplete()
         
         let input = GiftDetailViewModel.Input(didSendGift: didSendGift)
         
@@ -120,8 +127,9 @@ final class GiftDetailViewController: UIViewController {
         scrollView.rx.didScroll.asDriver().drive(onNext: {
             [weak self] in
             guard let self = self else { return }
+            let barHeight = self.navigationController?.navigationBar.bounds.height ?? 0
             
-            let targetHeight = self.productImageView.bounds.height - (self.navigationController?.navigationBar.bounds.height)! - (self.view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0)
+            let targetHeight = self.productImageView.bounds.height - barHeight - (self.view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0)
             
             var offset = self.scrollView.contentOffset.y / targetHeight
             
@@ -135,13 +143,6 @@ final class GiftDetailViewController: UIViewController {
     
     private func setupUI() {
         self.view.backgroundColor = .white
-        
-        navigationController?.isNavigationBarHidden = false
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.tintColor = .black
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
         
         statusBar = UIView(frame: UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame ?? .zero)
         statusBar.isOpaque = false

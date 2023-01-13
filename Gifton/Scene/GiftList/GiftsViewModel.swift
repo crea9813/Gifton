@@ -14,7 +14,9 @@ final class GiftsViewModel: ViewModelType {
     struct Input {
         let loadGifts: Driver<Void>
         
-        let didSelectGift: Driver<IndexPath>
+        let keyword: Driver<String>
+        
+        let didSelectGift: Driver<GiftItemViewModel>
     }
     
     struct Output {
@@ -60,14 +62,23 @@ final class GiftsViewModel: ViewModelType {
                 .map { $0.map { GiftItemViewModel(with: $0) } }
         }
         
-        let selectGift = input.didSelectGift
-            .withLatestFrom(gifts) { (indexPath, gifts) -> Gift in
-                return gifts[indexPath.row].gift
+        let keywordGifts = Driver.combineLatest(input.keyword, gifts)
+            .map { keyword, gifts in
+                if keyword.isEmpty { return gifts }
+                
+                return gifts.filter {
+                    $0.brandName.contains(keyword.lowercased()) || $0.productName.contains(keyword.lowercased()) || $0.gift.category.rawValue.contains(keyword.lowercased())
+                }
             }
+        
+        let giftItems = Driver.merge(gifts, keywordGifts)
+        
+        let selectGift = input.didSelectGift
+            .map { $0.gift }
             .do(onNext: coordinator.showGift)
         
         return Output(categories: categories,
-                      gifts: gifts,
+                      gifts: giftItems,
                       selectGift: selectGift,
                       fetching: fetching,
                       error: errors)

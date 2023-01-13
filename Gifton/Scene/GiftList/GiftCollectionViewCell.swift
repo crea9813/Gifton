@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class GiftCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = "GiftCollectionViewCell"
@@ -48,7 +49,7 @@ final class GiftCollectionViewCell: UICollectionViewCell {
         }
     
     func bind(with viewModel: GiftItemViewModel) {
-//        self.iconView
+        self.iconView.kf.setImage(with: URL(string: "https://coffee.alexflipnote.dev/random")!)
         self.brandNameLabel.text = viewModel.brandName
         self.productNameLabel.text = viewModel.productName
         self.priceLabel.text = "$ \(viewModel.price)"

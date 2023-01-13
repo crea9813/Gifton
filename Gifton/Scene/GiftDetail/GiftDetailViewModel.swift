@@ -8,18 +8,17 @@
 import Domain
 import RxSwift
 import RxCocoa
-import Contacts
 
 final class GiftDetailViewModel: ViewModelType {
     
     struct Input {
-        let didSendGift: Driver<CNContact>
+        let didSendGift: Driver<String>
     }
     
     struct Output {
         let gift: Driver<Gift>
         
-        let sendGift: Driver<(Gift, CNContact)>
+        let sendGift: Driver<(Gift, String)>
         
         let fetching: Driver<Bool>
         

@@ -25,6 +25,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let container = NetworkPlatform.UseCaseProvider()
         let navigationController = UINavigationController()
         
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.isTranslucent = true
+        navigationController.navigationBar.tintColor = UIColor(hex: "FF6464")
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
+        
+        
         let appCoordinator = DefaultGiftsCoordinator(navigationController: navigationController,
                                                      container: container)
         

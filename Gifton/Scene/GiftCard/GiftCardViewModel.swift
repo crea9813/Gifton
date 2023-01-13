@@ -13,6 +13,8 @@ final class GiftCardViewModel: ViewModelType {
  
     struct Input {
         let didSendGift: Driver<Void>
+        
+        let message: Driver<String>
     }
     
     struct Output {
@@ -25,11 +27,17 @@ final class GiftCardViewModel: ViewModelType {
         let error: Driver<GiftError>
     }
     
+    private let gift: Gift
+    private let contact: String
     private let useCase: GiftsUseCase
     private let coordinator: GiftCardCoordinator
     
-    init(useCase: GiftsUseCase,
+    init(gift: Gift,
+         contact: String,
+         useCase: GiftsUseCase,
          coordinator: GiftCardCoordinator) {
+        self.gift = gift
+        self.contact = contact
         self.useCase = useCase
         self.coordinator = coordinator
     }
@@ -41,11 +49,16 @@ final class GiftCardViewModel: ViewModelType {
         let fetching = activityIndicator.asDriver()
         let errors = errorTracker.compactMap({ $0 as? GiftError }).asDriver()
         
+        let gift = Driver.just(gift)
+        
+        let contact = Driver.just(contact)
+        
         let cards = Driver<[GiftCardItemViewModel]>
             .just([GiftCardItemViewModel(with: "gift_card_1"),
                    GiftCardItemViewModel(with: "gift_card_2"),
                    GiftCardItemViewModel(with: "gift_card_3")
                   ])
+        
         
         let didSendGift = input.didSendGift
             .do(onNext: coordinator.toConfirmOrder)

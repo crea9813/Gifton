@@ -73,15 +73,17 @@ final class GiftsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
         setupUI()
-//        configureGiftCollectionView()
         bind()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
         self.title = "Gifton"
     }
     
@@ -100,9 +102,14 @@ final class GiftsViewController: UIViewController {
             .mapToVoid()
             .asDriverOnErrorJustComplete()
         
-        let didSelectCell = self.giftCollectionView.rx.itemSelected.asDriver()
+        let didSelectCell = self.giftCollectionView.rx
+            .modelSelected(GiftItemViewModel.self)
+            .asDriver()
+        
+        let keyword = self.searchBar.rx.text.orEmpty.asDriver()
         
         let input = GiftsViewModel.Input(loadGifts: viewWillAppear,
+                                         keyword: keyword,
                                          didSelectGift: didSelectCell)
         
         let output = viewModel.transform(input: input)
@@ -131,7 +138,6 @@ final class GiftsViewController: UIViewController {
                     
                 } else {
                     let height = Float(262) * ceil(Float(self.giftCollectionView.numberOfItems(inSection: 0) / 2))
-                    print(self.giftCollectionView.numberOfItems(inSection: 0))
                     self.giftCollectionView.snp.updateConstraints {
                         $0.height.equalTo(height)
                     }
@@ -140,13 +146,22 @@ final class GiftsViewController: UIViewController {
             .disposed(by: disposeBag)
         
         output.selectGift.drive().disposed(by: disposeBag)
+        
+//        let viewTapGesture = UITapGestureRecognizer()
+//        self.view.addGestureRecognizer(viewTapGesture)
+//
+//        viewTapGesture.rx
+//            .event
+//            .asDriver()
+//            .drive(onNext: {
+//                [weak self] _ in
+//                guard let self = self else { return }
+//                self.view.endEditing(true)
+//            }).disposed(by: disposeBag)
     }
     
     private func setupUI() {
-        for family in UIFont.familyNames.sorted() {
-            let names = UIFont.fontNames(forFamilyName: family)
-            print("Family: \(family) Font names: \(names)")
-        }
+        self.view.backgroundColor = .white
         
         self.view.addSubview(searchBar)
         self.view.addSubview(filterButton)
