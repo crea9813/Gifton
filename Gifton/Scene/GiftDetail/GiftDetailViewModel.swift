@@ -49,6 +49,7 @@ final class GiftDetailViewModel: ViewModelType {
         let giftAndContact = Driver.combineLatest(gift, input.didSendGift)
         
         let didSendGift = input.didSendGift
+            .throttle(.milliseconds(500))
             .withLatestFrom(giftAndContact)
             .do(onNext: self.coordinator.toCreateCard)
         

@@ -19,8 +19,10 @@ final class GiftCollectionViewCell: UICollectionViewCell {
     
     private let iconView = UIImageView()
         .then {
+            $0.kf.indicatorType = .activity
             $0.backgroundColor = UIColor(hex: "D9D9D9")
-            $0.layer.cornerRadius = 4
+            $0.layer.cornerRadius = 8
+            $0.clipsToBounds = true
         }
     
     private let contentWrapView = UIView()
@@ -49,7 +51,9 @@ final class GiftCollectionViewCell: UICollectionViewCell {
         }
     
     func bind(with viewModel: GiftItemViewModel) {
-        self.iconView.kf.setImage(with: URL(string: "https://coffee.alexflipnote.dev/random")!)
+        
+        self.iconView.kf.setImage(with: URL(string: "\(viewModel.thumbnailImage)")!,options: [.transition(.fade(1))])
+        
         self.brandNameLabel.text = viewModel.brandName
         self.productNameLabel.text = viewModel.productName
         self.priceLabel.text = "$ \(viewModel.price)"

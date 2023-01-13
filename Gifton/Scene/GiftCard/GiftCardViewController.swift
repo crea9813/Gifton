@@ -48,14 +48,14 @@ final class GiftCardViewController: UIViewController {
     
     private let messageTitleLabel = UILabel()
         .then {
-            $0.font = .montFont(ofSize: 12, weight: .medium)
+            $0.font = .montFont(ofSize: 14, weight: .medium)
             $0.textColor = UIColor(hex: "929292")
             $0.text = "Add a message (optional)"
         }
     
     private let messageTextField = UITextField()
         .then {
-            $0.font = .montFont(ofSize: 16, weight: .medium)
+            $0.font = .montFont(ofSize: 18, weight: .medium)
             $0.textColor = UIColor(hex: "66554F")
         }
     
